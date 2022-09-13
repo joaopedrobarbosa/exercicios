@@ -1,9 +1,15 @@
-from multiprocessing.resource_sharer import stop
-
-
-try:
-    m,n = map(int, input().split())
+while True:
+    try:
+        m,n = map(int, input().split())
+    except EOFError:
+        break
     aux = m ;
+
+    if(m == 0):
+        m = 1
+    
+    if(n==0):
+        n =1
 
     while aux > 1:
         aux = aux - 1;
@@ -18,5 +24,3 @@ try:
     total = m + n;
 
     print(total)
-except EOFError:
-    exit
