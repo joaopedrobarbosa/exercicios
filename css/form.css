@@ -1,0 +1,41 @@
+h2{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+html{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(167, 167, 243);
+}
+form{
+    text-align: center;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 20px;
+}
+div{
+    margin: 10px 0;
+}
+
+details{
+    text-align: center;
+}
+
+input, textarea{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px purple;
+}
+
+input[type=text], input[type=email]{
+    padding: 12px 0;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
