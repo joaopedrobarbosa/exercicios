@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js"></script>
+    <script>document.write("<h2>"+document.title+"</h2");</script>
+</head>
+<body id="body">
+    <form action="JavaScript:submitForm()" method="POST">
+        <div>
+            <label class="bold" for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+        </div>
+        <div>
+            <label class="bold" for="email">email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label class="bold" for="idade">idade:</label>
+            <input type="text" id="idade" name="idade">
+        </div>
+        <input type="submit" id="botao" value="enviar">
+    </form>
+    <br>
+    <h2>Adicionar Elementos</h2>
+    <p>
+        Digite o texto:
+        <input type="text" id="texto">
+    </p>
+    <p>
+        <button onclick="adicionar()">Adicionar</button>
+    </p>
+    <div id="corpo"></div>
+    <br>
+    <h1>Remover Elementos</h1>
+    <button onclick="remover()">Remover</button>
+    <div id="div1">
+        <p id="elemento1">Texto que será removido...</p>
+    </div>
+    <br>
+    <button onclick="mudarCor()">Mudar cor</button>
+</body>
+</html>
