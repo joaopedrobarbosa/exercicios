@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function enviarLivro(){
+            if(document.getElementById('titulo').value == '')
+                alert("Preencha o campo Titulo")
+            else if(document.getElementById('autor').value == '')
+                alert("Preencha o campo Autor")
+            else if(document.getElementById('resumo').value == '')
+                alert("Preencha o campo Resumo")
+            else 
+                alert('Livro cadastrado com sucesso!')
+        }
+    </script>
+</head>
+<body>
+    <h2>Cadastro livros</h2>
+    <form action="">
+        <div>
+            <label for="titulo" >Titulo: </label>
+            <input id="titulo" type="text" required>
+        </div>
+        <br>
+        <div>
+            <label for="">Autor: </label>
+            <input id="autor" type="text">
+        </div>
+        <br>
+        <div>
+            <label for="">Resumo</label>
+            <textarea name="resumo" id="resumo" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <input type="submit" value="Enviar" onclick="enviarLivro()">
+        
+        
+        <input type="reset" value="clear">
+    </form>
+</body>
+</html>
