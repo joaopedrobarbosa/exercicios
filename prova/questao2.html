@@ -1,0 +1,88 @@
+letra a)
+<a href="gatolistrado.com.br">
+    <img style="border-radius: 10%;" src="gato.png" width="92" height = "120" alter = "imagem de um gato listrado">
+</a>
+a tag style deve estar associada a tag <img>
+pois ela se refere ao estilo que vai ser
+utilizado na imagem
+na tag <img> se utiliza o atribulo src de fonte
+e não href que é utilizado pra ser a referencia 
+utilizada no link
+
+
+letra b)
+<!-- <script>
+funtion validarForm() {
+    let x = documents.form["umForm"]["nome"].value;
+    if (x == "") {
+        alert(“Preencha o nome");
+        return false;
+    }
+}
+</script> -->
+deve-se utilizar o aspas em torno dos atributos do form
+e usar o metodo value para pegar o valor do elemento
+do form
+deve-se colocar uma aspas para fechar o valor passado
+no metodo alert
+e o deve-se escrever return false e não 'retun'
+
+
+letra c)
+
+<form method = "post" action=”meusite.com.br”></form>
+<div>
+    <label for = "txtList">Animal preferido:</label>
+    <input type = "text" list="animais" id = "txtList" placehold = "Escreva seu animal favorito" />
+    <datalist id = "animais">
+        <option value="cachorro"></option>
+        <option value="gato"></option>
+        <option value="tartaruga"></option>
+        <option value="girafa"></option>
+        <option value="mula"></option>
+    </datalist>
+</div>
+<div>
+    <input type = "submit" value = "Submit" />
+    <input type = "reset" value = "Clear" />
+</div>
+</form>
+
+utiliza-se a tag div ao inves da tag p
+para conter os outros atributos da pagina
+deve-se fechar a tag <input> apos "animal preferido"
+valor do atributo list deve ser igual ao id do datalist "animais"
+
+
+letra d)
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        a {
+        padding: 20px 0;
+        color: white;
+        display: inline-block;
+        background-color: blue;
+        text-align: center;
+        width: 150px;
+        margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="1.html" target="_blank">HTML</a>
+    <a href="2.html" target="_blank">CSS</a>
+    <a href="3.html" target="_blank">JavaScript</a>
+</body>
+</html>
+
+Tem que fechar a tag head 
+O style tem que ser referenciado a tag 'a'
+Pra ter a margem de 10 px entre eles 
+deve colocar 5 px de margem pra cada botão pois cada 
+um vai gerar uma margem de 5 px do botão totalizando 10 px
+entre eles 
+No terceiro link deve utilizar a mesma aspas pra pra abrir e fechar
+o valor do atributo (" ")
+Colocar  _ (underline) no "blank"

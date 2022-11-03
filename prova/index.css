@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+}
+
+h3{
+    font-size: 16px;
+    color: blue;
+}
+
+body{
+    font-family: Roboto;
+    font-size: 12px;
+}
+
+blockquote{
+    margin-left: 400px;
+}
+
+.imagem-livro{
+    width: 300px;
+    height: 300px;
+}
+
+p{
+    width: 650px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
