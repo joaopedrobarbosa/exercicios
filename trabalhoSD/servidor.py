@@ -29,9 +29,11 @@ while (True):
 	if (mensagem.get("tipoAcesso") == "1"):
 		lista.add(mensagem)
 	else:
-		
+		print('irei complementar o codigo aqui')
 
-	conexaoCliente.sendall(resposta.encode("utf-8"))
+	#codigo com erro, terminar implementaçao variavel resposta
+	# conexaoCliente.sendall(resposta.encode("utf-8"))
+	conexaoCliente.sendall(mensagem.encode("utf-8"))
 
 # mensagem de encerramento
 print("Servidor encerrado.")
