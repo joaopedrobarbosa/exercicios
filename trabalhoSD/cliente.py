@@ -24,7 +24,7 @@ def validarData(data):
 		return False
 
 # Definindo ip e porta
-HOST = '192.168.0.10'  # Endereco IP do Servidor
+HOST = '127.0.0.1'  # Endereco IP do Servidor
 PORT = 9000              # Porta que o Servidor estará escutando
 
 # Criando o socket

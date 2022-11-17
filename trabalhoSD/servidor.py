@@ -31,18 +31,21 @@ def totalVendasPeriodo(operacoes, periodoEmString):
 def melhorVendedor():
 	pass
 
-def melhorLoja():
-	pass
 
+def melhorLoja(operacoes):
+	try:
+		vendas = {}
+		for operacao in operacoes:
+			vendas[operacao['idLoja']] = vendas.get(operacao['idLoja'], 0) + int(operacao['valorVenda'])
+		
+		return max(vendas, key=vendas.get)
 
+	except ValueError:
+		return "ERRO"
 
-# APAGAR ESSE COMENTARIO AQUI DEPOIS
-# Aqui como cada um tem um ip, vamos deixar nossos ips aqui
-# fins de testes e praticidade na hora de entregar nós tiramos
-# IP Rafael = 192.168.0.10
 
 # definindo ip e porta
-HOST = '192.168.0.10'    # Substituir pelo endereco IP do Servidor
+HOST = '127.0.0.1'    # Substituir pelo endereco IP do Servidor
 PORT = 9000
 
 # criando o socket e associando ao endereço e porta
@@ -79,7 +82,7 @@ while (True):
 		elif (mensagem.get("tipoConsulta") == "4"):
 			resposta = melhorVendedor()
 		elif (mensagem.get("tipoConsulta") == "5"):
-			resposta = melhorLoja()
+			resposta = melhorLoja(operacoes)
 		else:
 			resposta = "ERRO"
 	else:
