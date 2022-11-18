@@ -23,6 +23,14 @@ def validarData(data):
 		print("ERRO")
 		return False
 
+def validarValorVenda(valorVenda):
+	try:
+		numero = float(valorVenda)
+		return True
+	except ValueError:
+		print("ERRO")
+		return False
+
 # Definindo ip e porta
 HOST = '127.0.0.1'  # Endereco IP do Servidor
 PORT = 9000              # Porta que o Servidor estará escutando
@@ -50,7 +58,8 @@ while (True):
 		if not validarData(dataVenda):
 			continue
 		valorVenda = input('Insira o valor da venda: ')
-
+		if not validarValorVenda(valorVenda):
+			continue
 
 		mensagem = {
 			'codOperacao' : codOperacao,
