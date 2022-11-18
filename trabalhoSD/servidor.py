@@ -12,14 +12,22 @@ def totalVendasVendedor(operacoes, vendedorSolicitado):
 	verificaExistenciaVendedor = False
 	for operacao in operacoes:
 		if operacao.get("nome") == vendedorSolicitado:
-			valor += int(operacao.get("valorVenda"))
+			valor += float(operacao.get("valorVenda"))
 			verificaExistenciaVendedor = True
 	if verificaExistenciaVendedor:
 		return str(valor)
 	return "ERRO"
 
-def totalVendasLoja():
-	pass
+def totalVendasLoja(operacoes, lojaSolicitada):
+	valor = 0
+	verificaExistenciaLoja = False
+	for operacao in operacoes:
+		if operacao.get("idLoja") == lojaSolicitada:
+			valor += float(operacao.get("valorVenda"))
+			verificaExistenciaLoja = True
+	if verificaExistenciaLoja:
+		return str(valor)
+	return "ERRO"
 
 def totalVendasPeriodo(operacoes, periodoEmString):
 	valor = 0
@@ -44,7 +52,7 @@ def melhorLoja(operacoes):
 	try:
 		vendas = {}
 		for operacao in operacoes:
-			vendas[operacao['idLoja']] = vendas.get(operacao['idLoja'], 0) + int(operacao['valorVenda'])
+			vendas[operacao['idLoja']] = vendas.get(operacao['idLoja'], 0) + float(operacao['valorVenda'])
 		
 		return max(vendas, key=vendas.get)
 
@@ -84,7 +92,7 @@ while (True):
 		if (mensagem.get("tipoConsulta") == "1"):
 			resposta = totalVendasVendedor(operacoes, mensagem.get("consulta"))
 		elif (mensagem.get("tipoConsulta") == "2"):
-			resposta = totalVendasLoja()
+			resposta = totalVendasLoja(operacoes, mensagem.get("consulta"))
 		elif (mensagem.get("tipoConsulta") == "3"):
 			resposta = totalVendasPeriodo(operacoes, mensagem.get("consulta"))
 		elif (mensagem.get("tipoConsulta") == "4"):
