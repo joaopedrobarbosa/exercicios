@@ -7,8 +7,16 @@ import datetime
 
 # APAGAR ESSA MENSAGEM DEPOIS DE PRONTO
 # Preparar um retorno em string para resposta para o cliente
-def totalVendasVendedor():
-	pass
+def totalVendasVendedor(operacoes, vendedorSolicitado):
+	valor = 0
+	verificaExistenciaVendedor = False
+	for operacao in operacoes:
+		if operacao.get("nome") == vendedorSolicitado:
+			valor += int(operacao.get("valorVenda"))
+			verificaExistenciaVendedor = True
+	if verificaExistenciaVendedor:
+		return str(valor)
+	return "ERRO"
 
 def totalVendasLoja():
 	pass
@@ -22,10 +30,10 @@ def totalVendasPeriodo(operacoes, periodoEmString):
 		return "ERRO"
 	if data1 > data2:
 		data1, data2 = data2, data1
-	for i in operacoes:
-		dataNova = datetime.date(int(i.get("dataVenda")[6:10]), int(i.get("dataVenda")[3:5]), int(i.get("dataVenda")[0:2]))
+	for operacao in operacoes:
+		dataNova = datetime.date(int(operacao.get("dataVenda")[6:10]), int(operacao.get("dataVenda")[3:5]), int(operacao.get("dataVenda")[0:2]))
 		if dataNova >= data1 and dataNova <= data2:
-			valor += float(i.get("valorVenda"))
+			valor += float(operacao.get("valorVenda"))
 	return str(valor)
 
 def melhorVendedor():
@@ -74,7 +82,7 @@ while (True):
 		# APAGAR ESSE COMENTARIO DEPOIS QUE TODO MUNDO JÁ TIVER FEITO
 		# Aqui entrarão os métodos para processamento de pedidos do gerente
 		if (mensagem.get("tipoConsulta") == "1"):
-			resposta = totalVendasVendedor()
+			resposta = totalVendasVendedor(operacoes, mensagem.get("consulta"))
 		elif (mensagem.get("tipoConsulta") == "2"):
 			resposta = totalVendasLoja()
 		elif (mensagem.get("tipoConsulta") == "3"):

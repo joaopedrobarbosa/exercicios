@@ -65,3 +65,5 @@
 # python servidor.py
 
 # python cliente.py
+
+# cd Documents\Unifacs\Quarto Semestre\Sistemas Distribuidos\trabalhoSD\exercicios\trabalhoSD
