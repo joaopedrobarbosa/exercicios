@@ -45,7 +45,15 @@ def totalVendasPeriodo(operacoes, periodoEmString):
 	return str(valor)
 
 def melhorVendedor():
-	pass
+	try:
+		vendas = {}
+		for operacao in operacoes:
+			vendas[operacao['nome']] = vendas.get(operacao['nome'], 0) + float(operacao['valorVenda'])
+		
+		return max(vendas, key=vendas.get)
+
+	except ValueError:
+		return "ERRO"
 
 
 def melhorLoja(operacoes):
