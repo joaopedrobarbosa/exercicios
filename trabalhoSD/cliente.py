@@ -2,7 +2,6 @@
 # Cliente Socket UDP
 # ------------------
 
-# Importando a biblioteca
 import socket
 
 def validarData(data):
@@ -40,6 +39,80 @@ cliente = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # Define o endereco do servidor (Ip e porta)
 enderecoServidor = (HOST, PORT)
+
+# Mensagens iniciadas previamente para fins de testes
+inicDic = {
+    'codOperacao': '1',
+    'nome': 'Alberto',
+    'idLoja': 'ALoja',
+    'dataVenda': '10/11/2022',
+    'valorVenda': '1000'
+}
+cliente.sendto(str(inicDic).encode("utf-8"), enderecoServidor)
+inicDic = {
+    'codOperacao': '1',
+    'nome': 'Alberto',
+    'idLoja': 'BLoja',
+    'dataVenda': '22/03/2022',
+    'valorVenda': '1500'
+}
+cliente.sendto(str(inicDic).encode("utf-8"), enderecoServidor)
+inicDic = {
+    'codOperacao': '1',
+    'nome': 'Alberto',
+    'idLoja': 'CLoja',
+    'dataVenda': '30/12/2021',
+    'valorVenda': '300'
+}
+cliente.sendto(str(inicDic).encode("utf-8"), enderecoServidor)
+inicDic = {
+    'codOperacao': '1',
+    'nome': 'Marcelo',
+    'idLoja': 'ALoja',
+    'dataVenda': '13/05/2021',
+    'valorVenda': '700'
+}
+cliente.sendto(str(inicDic).encode("utf-8"), enderecoServidor)
+inicDic = {
+    'codOperacao': '1',
+    'nome': 'Marcelo',
+    'idLoja': 'BLoja',
+    'dataVenda': '07/12/2021',
+    'valorVenda': '400'
+}
+cliente.sendto(str(inicDic).encode("utf-8"), enderecoServidor)
+inicDic = {
+    'codOperacao': '1',
+    'nome': 'Marcelo',
+    'idLoja': 'CLoja',
+    'dataVenda': '21/02/2022',
+    'valorVenda': '1000'
+}
+cliente.sendto(str(inicDic).encode("utf-8"), enderecoServidor)
+inicDic = {
+    'codOperacao': '1',
+    'nome': 'Danilo',
+    'idLoja': 'ALoja',
+    'dataVenda': '09/08/2022',
+    'valorVenda': '2000'
+}
+cliente.sendto(str(inicDic).encode("utf-8"), enderecoServidor)
+inicDic = {
+    'codOperacao': '1',
+    'nome': 'Danilo',
+    'idLoja': 'BLoja',
+    'dataVenda': '14/11/2022',
+    'valorVenda': '500'
+}
+cliente.sendto(str(inicDic).encode("utf-8"), enderecoServidor)
+inicDic = {
+    'codOperacao': '1',
+    'nome': 'Danilo',
+    'idLoja': 'CLoja',
+    'dataVenda': '19/03/2022',
+    'valorVenda': '300'
+}
+cliente.sendto(str(inicDic).encode("utf-8"), enderecoServidor)
 
 print("Vou começar a mandar mensagens para o servidor.")
 
