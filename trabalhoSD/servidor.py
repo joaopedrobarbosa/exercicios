@@ -60,7 +60,7 @@ def iniciarDados(operacoes):
         'nome': 'Danilo',
         'idLoja': 'ALoja',
         'dataVenda': '09/08/2022',
-        'valorVenda': '2000'
+        'valorVenda': '1900'
     }
     operacoes.append(inicDic)
     inicDic = {
