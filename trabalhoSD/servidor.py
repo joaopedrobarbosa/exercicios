@@ -80,6 +80,7 @@ def iniciarDados(operacoes):
     }
     operacoes.append(inicDic)
 
+
 def totalVendasVendedor(operacoes, vendedorSolicitado):
     valor = 0
     verificaExistenciaVendedor = False
@@ -123,7 +124,7 @@ def totalVendasPeriodo(operacoes, periodoEmString):
     return str(valor)
 
 
-def melhorVendedor():
+def melhorVendedor(operacoes):
     try:
         vendas = {}
         for operacao in operacoes:
@@ -187,7 +188,7 @@ while (True):
         elif (mensagem.get("tipoConsulta") == "3"):
             resposta = totalVendasPeriodo(operacoes, mensagem.get("consulta"))
         elif (mensagem.get("tipoConsulta") == "4"):
-            resposta = melhorVendedor()
+            resposta = melhorVendedor(operacoes)
         elif (mensagem.get("tipoConsulta") == "5"):
             resposta = melhorLoja(operacoes)
         else:
