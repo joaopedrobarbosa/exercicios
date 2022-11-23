@@ -82,15 +82,3 @@
     'dataVenda': '19/03/2022',
     'valorVenda': '300'
 }
-
-Melhor Loja esperado = "LojaA"
-Melhor Vendedor esperado = "Alberto"
-Total Vendas Alberto esperado = 2800.0
-Total Vendas Marcelo esperado = 2100.0
-Total Vendas Danilo esperado = 2700.0
-Total Vendas ALoja esperado = 3700.0
-Total Vendas ALoja esperado = 2400.0
-Total Vendas ALoja esperado = 1600.0
-Total de Vendas de uma rede de loja no periodo de 01/01/2021 ate 31/12/2021 esperado = 1400.0
-Total de Vendas de uma rede de loja no periodo de 01/01/2022 ate 31/12/2022 esperado = 6300.0
-Total de Vendas de uma rede de loja no periodo de 01/07/2022 ate 31/12/2022 esperado = 3500.0
