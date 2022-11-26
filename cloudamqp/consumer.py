@@ -4,12 +4,12 @@ url = os.environ.get('CLOUDAMQP_URL', 'amqps://kdtbtirf:ZMAfLPaKnBnwKR0oYFY3odqT
 params = pika.URLParameters(url)
 connection = pika.BlockingConnection(params)
 channel = connection.channel()
-channel.queue_declare(queue='hello')
+channel.queue_declare(queue='matriz')
 
 def callback(ch, method, properties, body):
   print(" [x] Received " + str(body))
 
-channel.basic_consume('hello',
+channel.basic_consume('matriz',
                       callback,
                       auto_ack=True)
 
