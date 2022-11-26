@@ -1,6 +1,8 @@
 Para utilizar o sistema, abra dois terminais no diretório que contem o sistema.
-    Em um deles utilize o seguinte comando "python servidor.py" para rodar o servidor.
-    No outro utilize o seguinte comando "python cliente.py" para rodar o cliente.
+    Em um deles utilize o seguinte comando "python servidor.py" ( para Windows 11 ) ou "python3 servidor.py" ( para Ubuntu 20.04 ) 
+    para rodar o servidor.
+    No outro utilize o seguinte comando "python cliente.py" ( para Windows 11 ) ou "python3 cliente.py" ( para Ubuntu 20.04 )  
+    para rodar o cliente.
 
 Agora, com o sistema rodando, inicializamos dados, para testar sem a necessidade de adicionar vários dados. Foram adicionados 3 vendedores, 3 lojas, com valores de vendas distintos e datas variadas. Recomendamos os seguintes casos de teste:
 
