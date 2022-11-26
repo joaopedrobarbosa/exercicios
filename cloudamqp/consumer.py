@@ -13,6 +13,6 @@ channel.basic_consume('matriz',
                       callback,
                       auto_ack=True)
 
-print(' [*] Waiting for messages:')
+print(' [*] Esperando por roupas:')
 channel.start_consuming()
 connection.close()
