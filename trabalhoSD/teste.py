@@ -19,66 +19,66 @@
 
 # testando ajuste url git
 
-{
-    'codOperacao': '1',
-    'nome': 'Alberto',
-    'idLoja': 'ALoja',
-    'dataVenda': '10/11/2022',
-    'valorVenda': '1000'
-}
-{
-    'codOperacao': '1',
-    'nome': 'Alberto',
-    'idLoja': 'BLoja',
-    'dataVenda': '22/03/2022',
-    'valorVenda': '1500'
-}
-{
-    'codOperacao': '1',
-    'nome': 'Alberto',
-    'idLoja': 'CLoja',
-    'dataVenda': '30/12/2021',
-    'valorVenda': '300'
-}
-{
-    'codOperacao': '1',
-    'nome': 'Marcelo',
-    'idLoja': 'ALoja',
-    'dataVenda': '13/05/2021',
-    'valorVenda': '700'
-}
-{
-    'codOperacao': '1',
-    'nome': 'Marcelo',
-    'idLoja': 'BLoja',
-    'dataVenda': '07/12/2021',
-    'valorVenda': '400'
-}
-{
-    'codOperacao': '1',
-    'nome': 'Marcelo',
-    'idLoja': 'CLoja',
-    'dataVenda': '21/02/2022',
-    'valorVenda': '1000'
-}
-{
-    'codOperacao': '1',
-    'nome': 'Danilo',
-    'idLoja': 'ALoja',
-    'dataVenda': '09/08/2022',
-    'valorVenda': '2000'
-}
-{
-    'codOperacao': '1',
-    'nome': 'Danilo',
-    'idLoja': 'BLoja',
-    'dataVenda': '14/11/2022',
-    'valorVenda': '500'
-}
-{
-    'codOperacao': '1',
-    'nome': 'Danilo',
-    'idLoja': 'CLoja',
-    'dataVenda': '19/03/2022',
-    'valorVenda': '300'
-}
+# {
+#     'codOperacao': '1',
+#     'nome': 'Alberto',
+#     'idLoja': 'ALoja',
+#     'dataVenda': '10/11/2022',
+#     'valorVenda': '1000'
+# }
+# {
+#     'codOperacao': '1',
+#     'nome': 'Alberto',
+#     'idLoja': 'BLoja',
+#     'dataVenda': '22/03/2022',
+#     'valorVenda': '1500'
+# }
+# {
+#     'codOperacao': '1',
+#     'nome': 'Alberto',
+#     'idLoja': 'CLoja',
+#     'dataVenda': '30/12/2021',
+#     'valorVenda': '300'
+# }
+# {
+#     'codOperacao': '1',
+#     'nome': 'Marcelo',
+#     'idLoja': 'ALoja',
+#     'dataVenda': '13/05/2021',
+#     'valorVenda': '700'
+# }
+# {
+#     'codOperacao': '1',
+#     'nome': 'Marcelo',
+#     'idLoja': 'BLoja',
+#     'dataVenda': '07/12/2021',
+#     'valorVenda': '400'
+# }
+# {
+#     'codOperacao': '1',
+#     'nome': 'Marcelo',
+#     'idLoja': 'CLoja',
+#     'dataVenda': '21/02/2022',
+#     'valorVenda': '1000'
+# }
+# {
+#     'codOperacao': '1',
+#     'nome': 'Danilo',
+#     'idLoja': 'ALoja',
+#     'dataVenda': '09/08/2022',
+#     'valorVenda': '2000'
+# }
+# {
+#     'codOperacao': '1',
+#     'nome': 'Danilo',
+#     'idLoja': 'BLoja',
+#     'dataVenda': '14/11/2022',
+#     'valorVenda': '500'
+# }
+# {
+#     'codOperacao': '1',
+#     'nome': 'Danilo',
+#     'idLoja': 'CLoja',
+#     'dataVenda': '19/03/2022',
+#     'valorVenda': '300'
+# }

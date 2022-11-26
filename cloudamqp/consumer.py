@@ -1,20 +1,18 @@
 import pika, os
 
-url = os.environ.get('CLOUDAMQP_URL', 'amqp://guest:guest@localhost:5672/%2f')
+url = os.environ.get('CLOUDAMQP_URL', 'amqps://kdtbtirf:ZMAfLPaKnBnwKR0oYFY3odqTNhxl_BZo@jackal.rmq.cloudamqp.com/kdtbtirf')
 params = pika.URLParameters(url)
 connection = pika.BlockingConnection(params)
 channel = connection.channel()
-channel.queue_declare(queu='test_queue')
+channel.queue_declare(queue='hello')
 
 def callback(ch, method, properties, body):
-    print(' [x] Received ' +  str(body))
+  print(" [x] Received " + str(body))
 
-channel.basic_consume(
-    'test_queue',
-    callback,
-    auto_ack=True
-)
+channel.basic_consume('hello',
+                      callback,
+                      auto_ack=True)
 
-print(' [*] Waiting for Messages: ')
+print(' [*] Waiting for messages:')
 channel.start_consuming()
 connection.close()
