@@ -1,20 +1,14 @@
 import pika, os
 
-url = os.environ.get('CLOUDAMQP_URL', 'amqp://guest:guest@localhost:5672/%2f')
+url = os.environ.get('CLOUDAMQP_URL', 'amqps://kdtbtirf:ZMAfLPaKnBnwKR0oYFY3odqTNhxl_BZo@jackal.rmq.cloudamqp.com/kdtbtirf')
 params = pika.URLParameters(url)
 connection = pika.BlockingConnection(params)
 channel = connection.channel()
+channel.queue_declare(queue='hello')
 
-channel.exchange_declare('text_exchange')
-channel.queue_declare(queu='test_queue')
-channel.queue_bind('test_queue', 'test_exchange', 'tests')
+channel.basic_publish(exchange='',
+                    routing_key='hello',
+                    body='Hello CloudAMQP!')
 
-channel.basic_publish(
-    body="Hello RabbitMQ!",
-    exchange="test_exchange",
-    routing_key='tests'
-)
-
-print(' Message sent. ')
-channel.close()
+print(" [x] Sent 'Hello World!'")
 connection.close()
